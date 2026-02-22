@@ -1,0 +1,15 @@
+year,mean_trip_distance,count,predicted
+2008,1.0,1.0,False
+2009,1.5,1.0,False
+2010,2.0,1.0,False
+2011,2.5,1.0,False
+2012,3.0,1.0,False
+2013,3.5,1.0,False
+2014,4.0,1.0,False
+2015,4.5,1.0,False
+2016,5.0,1.0,False
+2017,5.5,1.0,False
+2018,6.0,1.0,False
+2019,6.5,1.0,False
+2020,7.0,1.0,False
+2030,12.0,,True
