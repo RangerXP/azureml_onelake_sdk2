@@ -1,4 +1,4 @@
-# AzureML Sample Package (sanitized)
+﻿# AzureML Sample Package (sanitized)
 
 This repository contains a sanitized sample AzureML project demonstrating basic OneLake integration, local testing, a minimal training script, and a forecast example.
 
@@ -27,3 +27,4 @@ Notes
 - See `EXTRACTION_INSTRUCTIONS.txt` in the extracted folder for the same commands.
 
 If you want a different location for extraction or a more detailed walkthrough, tell me and I will add it.
+

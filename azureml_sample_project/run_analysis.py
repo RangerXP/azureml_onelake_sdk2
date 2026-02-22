@@ -120,12 +120,12 @@ def main():
     # Local quick test mode
     local_test = os.environ.get("LOCAL_TEST_FILE")
     if local_test:
-        # LOCAL_TEST_FILE is set â€” load a local CSV/Parquet for quick testing.
+        # LOCAL_TEST_FILE is set €” load a local CSV/Parquet for quick testing.
         # NOTE: In a production or demo against OneLake, replace this branch
         # with the OneLake download flow below (use the MLClient / OneLakeDatastore
         # + storage bearer token to list/download files). This local branch is
         # intentionally simple so external recipients can run the package offline.
-        print("LOCAL_TEST_FILE set â€” loading local file", local_test)
+        print("LOCAL_TEST_FILE set €” loading local file", local_test)
         df = pd.read_csv(local_test) if local_test.endswith(".csv") else pd.read_parquet(local_test)
         print("Rows:", len(df))
         print(df.head())
@@ -160,4 +160,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 

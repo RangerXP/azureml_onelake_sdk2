@@ -1,4 +1,4 @@
-param(
+﻿param(
   [string]$Src = "$PSScriptRoot\azureml_sample_project",
   [string]$OutZip = "$PSScriptRoot\azureml_sample_project_sanitized.zip"
 )

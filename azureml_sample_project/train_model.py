@@ -62,7 +62,7 @@ def main():
 
     preds = model.predict(X_test)
     mse = mean_squared_error(y_test, preds)
-    print(f"Trained LinearRegression â€” test MSE: {mse:.4f}")
+    print(f"Trained LinearRegression €” test MSE: {mse:.4f}")
     print("Coefficients:")
     for name, coef in zip(X.columns, model.coef_):
         print(f"  {name}: {coef:.4f}")
@@ -74,4 +74,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
