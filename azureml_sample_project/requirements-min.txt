@@ -1,0 +1,8 @@
+azure-identity
+requests
+pandas
+pyarrow
+
+# Optional (only if you need to register datastores or use Azure ML features):
+# azure-ai-ml
+# For training examples: scikit-learn, joblib
