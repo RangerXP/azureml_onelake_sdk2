@@ -1,0 +1,7 @@
+azure-ai-ml
+azure-identity
+pandas
+requests
+pyarrow
+scikit-learn
+joblib
