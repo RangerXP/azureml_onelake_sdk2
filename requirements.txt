@@ -1,0 +1,6 @@
+azure-identity
+azure-ai-ml
+azure-storage-file-datalake
+pyarrow
+pandas
+azure-cli

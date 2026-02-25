@@ -1,0 +1,84 @@
+# This is a sample config - no actual values used in the repo. Update with your values to run the sample.
+
+# Minimal OneLake config (preferred):
+ONE_LAKE_ENDPOINT=https://onelake.dfs.fabric.microsoft.com
+ONE_LAKE_WORKSPACE=8d7a6sf-62d5-47b5-9ee3-d9sa787e72c
+ARTIFACT_ID=098fdsv-165f-4131-a29b-xv897c6ba5
+RELATIVE_PATH=Files/nyc_taxi
+
+# Optional (used for Azure ML registered datastore operations):
+AZ_SUBSCRIPTION_ID=9fd87a98d7f-fe62-46fb-8fdd-sda89f7df7fs9
+AZ_RESOURCE_GROUP=exte5-west2-rscgrp
+AZ_WORKSPACE_NAME=azureml_workspace
+AZ_TENANT_ID=s98fd71-9726-4f67-a302-sfdg798dfg722
+ARTIFACT_ID=1sfd908g-165f-4131-a29b-sfdg980gf7a5
+
+
+
+
+#############################################
+# OneLake (Microsoft Fabric) – minimal config
+#############################################
+# Used by:
+# - Microsoft Fabric / OneLake
+# - Direct OneLake access via ADLS-compatible SDKs
+# - Azure ML OneLake datastore at runtime
+#
+# This section is sufficient if you are:
+# - Accessing OneLake directly (DataLakeServiceClient, Spark, etc.)
+# - Running code inside an Azure ML job that already has a datastore configured
+
+# Global OneLake DFS endpoint (always the same for Fabric tenants)
+ONE_LAKE_ENDPOINT=https://onelake.dfs.fabric.microsoft.com
+
+# Fabric workspace identifier (GUID preferred over name)
+# This represents the OneLake "filesystem" / container
+ONE_LAKE_WORKSPACE=e0309580-62d5-47b5-9ee3-df70a145e72c
+
+# Fabric Lakehouse item identifier (GUID)
+# This identifies the specific Lakehouse inside the Fabric workspace
+ARTIFACT_ID=144ba68a-165f-4131-a29b-d7b7c69cada5
+
+# Path inside the Lakehouse
+# Convention:
+#   Files/   → file-based data
+#   Tables/  → managed Delta tables
+RELATIVE_PATH=Files/nyc_taxi
+
+
+############################################################
+# Azure Machine Learning – control-plane / registration data
+############################################################
+# Used by:
+# - Azure ML SDK (azure-ai-ml)
+# - Datastore registration
+# - Job submission
+#
+# This section is required when:
+# - Creating or updating Azure ML resources
+# - Registering a OneLake datastore
+# - Submitting jobs via MLClient
+
+# Azure subscription that hosts the Azure ML workspace
+AZ_SUBSCRIPTION_ID=0s89fdgsfd-fe62-46fb-8fdd-fds987897gfd
+
+# Azure resource group that contains the Azure ML workspace
+AZ_RESOURCE_GROUP=exte5-west2-rscgrp
+
+# Azure ML workspace name (NOT the Fabric workspace)
+AZ_WORKSPACE_NAME=azureml_workspace
+
+# Azure Entra ID tenant
+# Used for authentication (service principal, managed identity, or interactive login)
+AZ_TENANT_ID=fsd879fgds-9726-4f67-a302-fdsg90898sdfg
+
+
+############################################################
+# Notes / Intentional Duplication
+############################################################
+# ARTIFACT_ID appears above in the OneLake section because:
+# - It is required for direct OneLake access
+# - It is also logically tied to Azure ML datastore definitions (same name)
+#
+# Keeping it duplicated (or centrally referenced by code)
+# makes it explicit that this value bridges Fabric and Azure ML.
